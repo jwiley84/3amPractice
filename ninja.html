@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <title>Ninja game practice</title>
+    <!--<link type="text/css" rel="stylesheet" href="css/ninja.css">-->
+</head>
+<body style="background-color: rgb(8,37,0);">
+    <div id="announcement" style="color: rgb(31,234,0);"><h1></h1></div>
+    <div id="background">
+        <div id="character" style="position: absolute; 
+        top: 150px; 
+        left: 450px; 
+        background-image: url('images/ninjagame/left_idleNT.png');
+        height: 123px;
+        width: 105px;"></div>
+    </div>
+    <script>
+        var leftValue = 450, topValue=150;
+        var maxTop = 100, maxBottom=600, maxRight=1000, maxLeft=100, direction = 'left';
+
+
+
+        function update(){
+            document.getElementById("character").style.left = leftValue+"px";
+            document.getElementById("character").style.top = topValue+"px";
+            document.getElementById("character").style.backgroundImage = "url('images/ninjagame/"+ direction +"_oneNT.png')";
+            document.getElementById("character").style.backgroundImage = "url('images/ninjagame/"+ direction +"_twoNT.png')";
+        }
+
+        document.onkeydown = function(e) {//'e' is an event
+            console.log(e);
+            if (e.keyCode === 37) { //LEFT
+                if (leftValue - 10 > maxLeft) {
+                    leftValue = leftValue - 10;
+                    direction = 'left';
+                }
+                else {
+                    document.querySelector("h1").innerHTML = "<div class='announcment'><h1>BOING!</h1></div>";
+                }
+            }
+            else if (e.keyCode === 39) { //RIGHT
+                if (leftValue + 10 < maxRight) {
+                    leftValue = leftValue + 10;
+                    direction = 'right';
+                }
+                else {
+                    document.querySelector("h1").innerHTML = "<div class='announcment'><h1>BOING!</h1></div>";
+                }
+            }
+            else if (e.keyCode === 40) { //DOWN
+                if (topValue + 10 < maxBottom) {
+                    topValue = topValue + 10;
+                    direction = 'down';
+                }
+                else {
+                    document.querySelector("h1").innerHTML = "<div class='announcment'><h1>BOING!</h1></div>";
+                } 
+            }
+            else if (e.keyCode === 38) {//UP
+                if (topValue - 10 > maxTop) {
+                    topValue = topValue - 10;
+                    direction = 'up';
+                }
+                else {
+                    document.querySelector("h1").innerHTML = "<div class='announcment'><h1>BOING!</h1></div>";
+                }
+            }
+        update();
+        }
+    </script>
+</body>
+</html>
