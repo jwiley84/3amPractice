@@ -10,20 +10,26 @@
         top: 150px; 
         left: 450px; 
         background-image: url('images/ninjagame/left_idleNT.png');
-        height: 123px;
+        height: 119px;
         width: 105px;"></div>
     </div>
     <script>
         var leftValue = 450, topValue=150;
         var maxTop = 100, maxBottom=600, maxRight=1000, maxLeft=100, direction = 'left';
-
+        var step = 1;
 
 
         function update(){
+            if (step === 1) {
+                step = 2;
+            }
+            else {
+                step = 1;
+            }
             document.getElementById("character").style.left = leftValue+"px";
             document.getElementById("character").style.top = topValue+"px";
-            document.getElementById("character").style.backgroundImage = "url('images/ninjagame/"+ direction +"_oneNT.png')";
-            document.getElementById("character").style.backgroundImage = "url('images/ninjagame/"+ direction +"_twoNT.png')";
+            document.getElementById("character").style.backgroundImage = "url('images/ninjagame/"+ direction + step +".png')";
+            document.getElementById("character").style.backgroundImage = "url('images/ninjagame/"+ direction + step +".png')";
         }
 
         document.onkeydown = function(e) {//'e' is an event
