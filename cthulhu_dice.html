@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CD Desktop</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Special+Elite" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- 
+            this is lines of blank shit to remind you to fix the paths after you update!
+
+
+
+
+
+
+        -->
+    <link type="text/css" rel="stylesheet" href="css/cthulhu-dice.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default alt-colour">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="btn btn-success buttony" href="https://boardgamegeek.com/boardgame/65611/cthulhu-dice">
+                        Cthulhu Dice at Board Game Geek
+                    </a>
+                    <a class="btn btn-success buttony" href="http://www.sjgames.com/dice/cthulhudice/img/CDRules_English.pdf">
+                        Rules PDF
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="row" id="headerRow">
+            <h1 class="pretty" style="text-align: center">Welcome to Cthulhu Dice!</h1>
+            <img src="images/pokemon/eevee.png" width="200px" height="auto">
+            <button class="stylish" id="roll">Roll the die!</button>
+            <span class="pretty" id="CS">Cthulu's current sanity: </span>
+            <span id="cSanity" class="pretty">0</span>
+        </div>
+
+        <div class="row" id="playerRow">
+            <div class="col-md-3 col-sm-3" id="p1c1N">Player 1, Cultist 1</div>
+            <div class="col-md-3 col-sm-3" id="p1c2N">Player 1, Cultist 2</div>
+            <div class="col-md-3 col-sm-3" id="p2c1N">Player 2, Cultist 1</div>
+            <div class="col-md-3 col-sm-3" id="p2c2N">Player 2, Cultist 2</div>
+        </div>
+        <div class="row" id="buttonRow">
+            <div class="col-md-3 col-sm-3">
+                <button class="stylish" id="P1C1">Target!</button>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <button class="stylish" id="P1C2">Target!</button>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <button class="stylish" id="P2C1">Target!</button>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <button class="stylish" id="P2C2">Target!</button>
+            </div>
+        </div>
+        <div class="row" id="sanityRow">
+            <div class="col-md-3 current col-sm-3" id="P1C1S">Sanity: 3</div>
+            <div class="col-md-3 current col-sm-3" id="P1C2S">Sanity: 3</div>
+            <div class="col-md-3 current col-sm-3" id="P2C1S">Sanity: 3</div>
+            <div class="col-md-3 current col-sm-3" id="P2C2S">Sanity: 3</div>
+        </div>
+        <div class="row" id="casterRow">
+            <div class="col-md-3 col-sm-3 emptyBox"></div>
+            <div class="col-md-3 col-sm-3 emptyBox"></div>
+            <div class="col-md-3 col-sm-3 emptyBox"></div>
+            <div class="col-md-3 col-sm-3 emptyBox"></div>
+        </div>
+        <div class="row" id="victimRow">
+            <div class="col-md-3 col-sm-3 emptyBox"></div>
+            <div class="col-md-3 col-sm-3 emptyBox"></div>
+            <div class="col-md-3 col-sm-3 emptyBox"></div>
+            <div class="col-md-3 col-sm-3 emptyBox"></div>
+        </div>
+    </div>
+    <script src="scripts/cthulhu-dice.js"></script>
+</body>
+
+</html>

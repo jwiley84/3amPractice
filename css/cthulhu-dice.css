@@ -1,0 +1,59 @@
+button {
+    padding: 20px;
+}
+
+.current {
+    font-size: 36px;
+    color: rgb(31, 234, 0);
+}
+
+body {
+    background-color: #637713;
+    font-family: "Special Elite", cursive;
+    background: linear-gradient(to bottom right, green, black, black, black, #330c33);
+    height: 1000px;
+}
+
+.stylish {
+    background-color: #6c9357;
+    font-size: 24px;
+    font-family: "Special Elite", cursive;
+    border-radius: 20px;
+}
+
+.pretty {
+    font-family: 'Special Elite', cursive;
+    font-size: 48px;
+    color: purple;
+}
+
+.alt-colour {
+    background-color: rgb(53, 91, 33);
+    border: 2px solid black;
+}
+
+.buttony {
+    color: aqua;
+}
+
+.row div {
+    text-align: center;
+}
+
+#buttonRow div {
+    padding: 7px 15px;
+}
+
+.emptyBox {
+    height: 61px;
+    width: 292.5px;
+}
+
+#playerRow {
+    font-size: 36px;
+    color: rgb(204, 244, 117);
+}
+
+.row div {
+    border: 5px solid rgb(0, 47, 6);
+}
